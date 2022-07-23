@@ -71,3 +71,32 @@ export async function sendToken(user: UserSignIn) {
     return token;
 
 }
+
+export async function validateToken(token: string) {
+
+    let answer = {res: true, text: "", userId: 0};
+    let email = "";
+
+    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+        if (err) {
+            answer = {res: false, text: err.message, userId: 0}
+        } else {
+            email = JSON.parse(JSON.stringify(decoded)).email;
+        }
+    });
+
+    if (!answer.res) {
+        return answer;
+    }
+
+    if (email) {
+        const userDatabase = await usersRepository.findByEmail(email)
+        if (!userDatabase) {
+            return {res: false, text: "Email not found", userId: 0}
+        }
+        return {res: true, userId: userDatabase.id, text: ""};
+    }
+    
+    return {res: false, text: "Malformed token", userId: 0};
+    
+}
