@@ -21,3 +21,15 @@ export async function testAddPOST(req: Request, res: Response) {
 
   res.sendStatus(201);
 }
+
+export async function testListDisciplineGET(req: Request, res: Response) {
+
+  
+  const testListDiscipline = await testsService.testListDiscipline();
+  if (!testListDiscipline) {
+    res.status(404);
+    return;
+  }
+
+  res.send(testListDiscipline);
+}

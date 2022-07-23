@@ -39,3 +39,13 @@ export async function insertIntoDatabase(test: TestAdd, userId: number) {
 
     return {res: true, text: ""}
 }
+
+export async function testListDiscipline() {
+
+    const testListDiscipline = await testsRepository.testListDiscipline()
+    if (!testListDiscipline) {
+        return null;
+    }
+
+    return testListDiscipline;
+}

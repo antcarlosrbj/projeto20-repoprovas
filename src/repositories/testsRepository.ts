@@ -22,3 +22,36 @@ export async function insertTest(test: TestDb) {
     data: test
   });
 }
+
+export async function testListDiscipline() {
+  return prisma.terms.findMany({
+    select: {
+      number: true,
+      disciplines: {
+        select: {
+          name: true,
+          teachersDisciplines: {
+            select: {
+              teachers: {
+                select: {
+                  name: true
+                }
+              },
+              tests: {
+                select: {
+                  name: true,
+                  pdfUrl: true,
+                  categories: {
+                    select: {
+                      name: true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+  });
+}
