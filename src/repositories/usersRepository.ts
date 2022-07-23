@@ -1,5 +1,5 @@
 import { prisma } from "../config/database.js";
-import { user } from "./../schemas/authSchema.js";
+import { UserSignUp } from "./../schemas/authSchema.js";
 
 export async function findByEmail(email: string) {
   return prisma.users.findFirst({
@@ -7,7 +7,7 @@ export async function findByEmail(email: string) {
   });
 }
 
-export async function insert(user: user) {
+export async function insert(user: UserSignUp) {
   delete user.passwordConfirmation;
   return prisma.users.create({
     data: user

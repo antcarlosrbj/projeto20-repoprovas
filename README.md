@@ -35,9 +35,18 @@ $ npm run dev
     - Route to register new user
     - headers: {}
     - body: {
-        "email": "antonio@antonio.com",
+      "email": "antonio@antonio.com",
     	"password": "12345678",
     	"passwordConfirmation": "12345678"
+    }
+
+
+- POST /sign-in
+    - Route to sign in
+    - headers: {}
+    - body: {
+        "email": "antonio@antonio.com",
+        "password": "12345678"
     }
 
 ```
