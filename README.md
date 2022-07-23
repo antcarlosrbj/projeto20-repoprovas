@@ -61,4 +61,11 @@ $ npm run dev
         "teacherId": 2
     }
 
+
+- POST /test/list/discipline
+    - Route to list tests by discipline
+    - headers: {
+        "Authorization": "Bearer <TOKEN>"
+    }
+    - body: {}
 ```
