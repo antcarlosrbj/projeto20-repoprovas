@@ -10,7 +10,7 @@
 
 ## Usage
 
-[comment]: <> ([![heroku](https://img.shields.io/badge/heroku-000?style=for-the-badge)](https://projeto20-repoprovas-antcrbj.herokuapp.com))
+<> ([![heroku](https://img.shields.io/badge/heroku-000?style=for-the-badge)](https://projeto20-repoprovas-antcrbj.herokuapp.com))
 
 ```bash
 $ git clone https://github.com/antcarlosrbj/projeto20-repoprovas
