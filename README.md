@@ -47,4 +47,18 @@ $ npm run dev
         "password": "12345678"
     }
 
+
+- POST /test/add
+    - Route to add a test
+    - headers: {
+        "Authorization": "Bearer <TOKEN>"
+    }
+    - body: {
+        "name": "Google",
+        "pdfUrl": "http://www.google.com",
+        "categoryId": 1,
+        "disciplineId": 5,
+        "teacherId": 2
+    }
+
 ```

@@ -6,6 +6,8 @@ DELETE FROM teachers;
 DELETE FROM terms;
 DELETE FROM users;
 
+INSERT INTO users ("id", "email", "password") VALUES (1, 'antonio@antonio.com', '$2b$10$zVnQxd2.uKbaCvXepcc8e.n6zOrngdZG/PZ/Pdgi/f6jMscSGGq2O');
+
 INSERT INTO terms ("id", "number") VALUES (1, 1);
 INSERT INTO terms ("id", "number") VALUES (2, 2);
 INSERT INTO terms ("id", "number") VALUES (3, 3);
