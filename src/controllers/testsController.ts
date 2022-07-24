@@ -33,3 +33,15 @@ export async function testListDisciplineGET(req: Request, res: Response) {
 
   res.send(testListDiscipline);
 }
+
+export async function testListTeacherGET(req: Request, res: Response) {
+
+  
+  const testListTeacher = await testsService.testListTeacher();
+  if (!testListTeacher) {
+    res.status(404);
+    return;
+  }
+
+  res.send(testListTeacher);
+}

@@ -49,3 +49,13 @@ export async function testListDiscipline() {
 
     return testListDiscipline;
 }
+
+export async function testListTeacher() {
+
+    const testListTeacher = await testsRepository.testListTeacher()
+    if (!testListTeacher) {
+        return null;
+    }
+
+    return testListTeacher;
+}

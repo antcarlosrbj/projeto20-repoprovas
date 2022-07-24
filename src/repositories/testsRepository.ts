@@ -55,3 +55,31 @@ export async function testListDiscipline() {
     },
   });
 }
+
+export async function testListTeacher() {
+  return prisma.teachers.findMany({
+    select: {
+      name: true,
+      teachersDisciplines: {
+        select: {
+          tests: {
+            select: {
+              name: true,
+              pdfUrl: true,
+              categories: {
+                select: {
+                  name: true
+                }
+              }
+            }
+          },
+          disciplines: {
+            select: {
+              name: true
+            }
+          }
+        }
+      }
+    }
+  });
+}
