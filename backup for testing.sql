@@ -42,4 +42,4 @@ SELECT pg_catalog.setval('public."teachersDisciplines_id_seq"', 6, true);
 SELECT pg_catalog.setval('public.teachers_id_seq', 2, true);
 SELECT pg_catalog.setval('public.terms_id_seq', 6, true);
 SELECT pg_catalog.setval('public.tests_id_seq', 1, false);
-SELECT pg_catalog.setval('public.users_id_seq', 1, false);
+SELECT pg_catalog.setval('public.users_id_seq', 1, true);

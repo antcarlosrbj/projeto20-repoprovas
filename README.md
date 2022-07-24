@@ -26,6 +26,8 @@ $ npx prisma generate
 $ npm run dev
 ```
 
+### To test use the [backup for testing.sql](https://github.com/antcarlosrbj/projeto20-repoprovas/blob/main/backup%20for%20testing.sql)
+
 ## API:
 
 ```
@@ -64,6 +66,14 @@ $ npm run dev
 
 - POST /test/list/discipline
     - Route to list tests by discipline
+    - headers: {
+        "Authorization": "Bearer <TOKEN>"
+    }
+    - body: {}
+
+
+- POST /test/list/teacher
+    - Route to list tests by teacher
     - headers: {
         "Authorization": "Bearer <TOKEN>"
     }
