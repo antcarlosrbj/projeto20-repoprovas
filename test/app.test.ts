@@ -1,7 +1,7 @@
 import supertest from "supertest";
 import jwt from "jsonwebtoken";
 import app from "./../src/app.js";
-import { prisma } from "./../src/config/database.js";
+import {prisma} from "./../src/config/database.js";
 
 const EMAIL = `antonio@antonio.com`;
 const PASSWORD = "12345678";
