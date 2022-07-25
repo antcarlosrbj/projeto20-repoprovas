@@ -2,10 +2,12 @@
   "name": "projeto20-repoprovas",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
   "type": "module",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
-    "build": "tsc src/server.ts",
+    "build": "tsc",
     "start": "node dist/server.js",
     "dev": "nodemon src/server.ts",
     "test": "dotenv -e .env prisma migrate dev && prisma db seed && NODE_OPTIONS=--experimental-vm-modules dotenv -e .env jest -i"
